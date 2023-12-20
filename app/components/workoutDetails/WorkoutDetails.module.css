@@ -1,0 +1,32 @@
+.workout_details_container{
+    width: 100%;
+    background: var(--white);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 .1px 5px rgb(211, 210, 210);
+}
+
+.workout_title{
+    margin-bottom: .5rem;
+    color: var(--light-indigo);
+    font-size: larger;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0.2rem 0;
+}
+
+.buttons button{
+    color: #fff;
+    padding: 5px 10px;
+}
+
+.edit{
+    background: blue;
+}
+
+.delete{
+    background: red;
+}

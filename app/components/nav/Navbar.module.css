@@ -1,0 +1,101 @@
+.nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 3rem;
+    box-shadow: 0 .1px 10px var(--light-indigo);
+    background: var(--white);
+}
+
+.logo{
+    width:auto;
+}
+
+.profile{
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profileBtns{
+    width: fit-content;
+    display: flex;
+    gap: 1rem;
+}
+
+.addTask{
+    display: none;
+    background: lightblue;
+    color: var(--white);
+}
+
+.logout{
+    background: rgb(248, 80, 80);
+    color: var(--white);
+    width: fit-content;
+}
+
+.navAccess{
+    margin-bottom: .5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.navAccess a{
+    color: var(--indigo);
+}
+
+@media screen and (max-width: 768px) {
+    .nav{
+        padding-inline: 1.5rem;
+    }
+    .logo{
+        width: fit-content;
+    }
+    .addTask{
+        display: block;
+    }
+}
+@media screen and (max-width: 600px) {
+    .nav{
+        padding-inline: .4rem;
+    }
+
+    .profile{
+        margin-bottom: .5rem;
+    }
+
+    .profile button{
+        font-size: x-small;
+    }
+    .navAccess button{
+        font-size: x-small;
+    }
+}
+
+@media screen and (max-width: 435px) {
+    .nav{
+        padding-inline: .2rem;
+    }
+
+    .profile{
+        margin-bottom: .5rem;
+    }
+
+    .profile small, .navAccess a{
+        font-size: xx-small;
+    }
+    .profile button{
+        font-size: xx-small;
+    }
+    .navAccess button{
+        font-size: xx-small;
+    }
+}
