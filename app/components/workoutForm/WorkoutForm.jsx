@@ -138,8 +138,8 @@ const WorkoutForm = () => {
             <input type="number" value={reps} onChange={(e)=>updateReps(e.target.value)}/>
         </label>
         {err && <small className={styles.err}>{err}</small>}
-        <button>{edit ? "Edit post" : "Add post"}</button>
-        {edit && <button className={styles.exitModal} onClick={()=>{exitEdit()}}>Exit</button>}
+        <button>{edit ? "Edit workout" : "Add workout"}</button>
+        <button className={styles.exitModal} onClick={()=>{exitEdit()}}>Exit</button>
       </form>
     </div>
   )
