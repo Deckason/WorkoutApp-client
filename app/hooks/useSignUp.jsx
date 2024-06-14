@@ -19,12 +19,11 @@ const useSignUp = () => {
                 method: "POST",
                 body: JSON.stringify({username, email, password, confirmPassword}),
                 headers: {
-                    "Content-type": "application/json",
-                    // "Authorization":`bearer ${user.token}`
+                    "Content-type": "application/json"
                 }
             }
             try {
-                const response = await fetch("http://localhost:4000/users/sign-up", requestOptions)
+                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users/sign-up`, requestOptions)
                 const json = await response.json()
                 if (!response.ok) {
                     setIsLoading(false)

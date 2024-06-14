@@ -46,7 +46,7 @@ const WorkoutForm = () => {
               }
           }
           try {
-              const response = await fetch("http://localhost:4000/workouts", requestOptions)
+              const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/workouts`, requestOptions)
               const json = await response.json()
               if (!response.ok) {
                   updateErr(json.error)
@@ -91,7 +91,7 @@ const WorkoutForm = () => {
         }
 
         try {
-          const response = await fetch(`http://localhost:4000/workouts/${_id}`, requestOptions)
+          const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/workouts/${_id}`, requestOptions)
           if (!response.ok) {
               updateErr(response.error)
               updateIsLoading(false)

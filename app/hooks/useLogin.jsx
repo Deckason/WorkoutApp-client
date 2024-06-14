@@ -21,7 +21,7 @@ const useLogin = () => {
                     }
                 }
                 try {
-                    const response = await fetch("http://localhost:4000/users/login", requestOptions)
+                    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users/login`, requestOptions)
                     const json = await response.json()
                     if (!response.ok) {
                         setErr(json.error)

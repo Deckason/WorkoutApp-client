@@ -9,7 +9,7 @@ import { userStore } from "@/app/store/userStore"
 
 // const fetchWorkouts = async ()=>{
 
-//     const res = await fetch("http://localhost:4000/", {cache: "no-cache", next: {revalidate: 10}})
+//     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/`, {cache: "no-cache", next: {revalidate: 10}})
 //     const workout = await res.json()
 //     return workout;
   
@@ -21,7 +21,7 @@ const HomePage = () => {
   const {push} = useRouter()
 
   const fetchWorkouts = ()=>{
-    fetch('http://localhost:4000/workouts', {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/workouts`, {
       headers:{
         "Authorization":`bearer ${user?.token}`
       }

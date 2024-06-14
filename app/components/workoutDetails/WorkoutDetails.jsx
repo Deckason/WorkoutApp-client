@@ -37,7 +37,7 @@ const WorkoutDetails = ({workouts}) => {
   }
 
   try {
-    const response = await fetch(`http://localhost:4000/workouts/${id}`, requestOptions)
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/workouts/${id}`, requestOptions)
     if (!response.ok) {
         updateErr(response.error)
     }
